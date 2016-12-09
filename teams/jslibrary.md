@@ -32,6 +32,12 @@ Registers a handler for when the user changes their theme. Only one handler may 
 * `handler: (theme: string) => void`
     * The handler to invoke when the user changes their theme.
 
+### `shareDeepLink(deepLinkParameters: `[`DeepLinkParameters`](#DeepLinkParameters)`): void`
+Shares a deep link a user can use to navigate back to a specific state in this page.
+
+#### Parameters
+* `deepLinkParameters: `[`DeepLinkParameters`](#DeepLinkParameters)
+
 ## `microsoftTeams.authentication`
 
 ### `authenticate(authenticateParameters: `[`AuthenticateParameters`](#authentication.AuthenticateParameters)`): void`
@@ -112,6 +118,17 @@ The current user's AAD tenant id. As a malicious party can host content in a mal
 
 #### `upn?: string`
 The current user's upn. As a malicious party can host content in a malicious browser, this value should only be used as a hint as to who the user is and never as proof of identity. This field is only available when needsIdentity is set in the manifest.
+
+### <a name="DeepLinkParameters"></a>`DeepLinkParameters`
+
+#### `deepLinkContext: string`
+Any context the page might need to restore a specific state for the user.
+
+#### `label: string`
+The label which should be displayed for this deep link when the link is rendered in a client.
+
+#### `webUrl: string`
+The fallback url to navigate the user to if there is no support for rendering the page inside the client.
 
 ### <a name="authentication.AuthenticateParameters"></a>`authentication.AuthenticateParameters`
 
