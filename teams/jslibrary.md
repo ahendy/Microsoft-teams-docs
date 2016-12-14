@@ -37,6 +37,8 @@ _Introduced in v0.3_
 
 Shares a deep link a user can use to navigate back to a specific state in this page.
 
+For consuming a deep link, see [`Context.deepLinkContext`](#deeplinkcontext-string).
+
 #### Parameters
 * `deepLinkParameters: `[`DeepLinkParameters`](#DeepLinkParameters)
 
@@ -110,6 +112,8 @@ Sets the validity state for the settings. The inital value is false so the user 
 _Introduced in v0.3_
 
 The context passed in as part of a deep link navigation to this page which should be used to restore a specific page state.
+
+For generating a deep link, see [`shareDeepLink`](#sharedeeplinkdeeplinkparametersdeeplinkparameters-void).
 
 #### `groupId?: string`
 The O365 group id for the team with which the content is associated. This field is only available when needsIdentity is set in the manifest.
