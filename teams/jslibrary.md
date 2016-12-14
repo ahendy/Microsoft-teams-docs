@@ -33,6 +33,8 @@ Registers a handler for when the user changes their theme. Only one handler may 
     * The handler to invoke when the user changes their theme.
 
 ### `shareDeepLink(deepLinkParameters: `[`DeepLinkParameters`](#DeepLinkParameters)`): void`
+_Introduced in v0.3_
+
 Shares a deep link a user can use to navigate back to a specific state in this page.
 
 #### Parameters
@@ -103,6 +105,11 @@ Sets the validity state for the settings. The inital value is false so the user 
 ## Interfaces
 
 ### <a name="Context"></a>`Context`
+
+#### `deepLinkContext: string`
+_Introduced in v0.3_
+
+The context passed in as part of a deep link navigation to this page which should be used to restore a specific page state.
 
 #### `groupId?: string`
 The O365 group id for the team with which the content is associated. This field is only available when needsIdentity is set in the manifest.
